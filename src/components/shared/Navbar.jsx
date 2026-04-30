@@ -1,11 +1,12 @@
 "use client";
+import { Button } from "@heroui/react";
 import Image from "next/image";
 import Link from "next/link";
 
 const Navbar = () => {
     return (
-        <div className="bg-[#0a0f0d]/70 backdrop-blur-md border-b border-[#1c2f26] rounded-full">
-            <nav className=" flex flex-wrap justify-between items-center  py-3 px-5">
+        <div className="container mx-auto  border-b border-[#1c2f26]">
+            <nav className="bg-[#0a0f0d]/70 backdrop-blur-md flex flex-wrap justify-between items-center px-5 md:px-8 lg:px-12  py-3">
                 <div className="flex gap-2 items-center">
                     {/* <Image
             src={"/logo.svg"}
@@ -27,7 +28,7 @@ const Navbar = () => {
 
                     <Link href={'/all-books'}>
                         <li className="hover:text-[#10b981] cursor-pointer">All Books</li></Link>
-                        
+
                     <Link href={'/my-profile'}>
                         <li className="hover:text-[#10b981] cursor-pointer">My Profile</li>
                     </Link>
@@ -36,14 +37,14 @@ const Navbar = () => {
                 <div className="flex gap-4">
                     <div className="flex items-center gap-4 text-sm">
 
-                        <button className="bg-[#10b981] hover:bg-[#059669] 
-                        px-4 py-2 rounded-full text-white">
+                        <Button  className="bg-[#10b981] hover:bg-[#059669] 
+                     transition duration-300">
                             <Link href={'/login'}>Login</Link>
-                        </button>
+                        </Button >
 
-                        <button className="bg-[#ef4444] hover:bg-[#dc2626] px-4 py-2 rounded-full text-white">
+                        <Button className="bg-[#ef4444] hover:bg-[#dc2626]   transition duration-300">
                             <Link href={"/"}>Logout</Link>
-                        </button>
+                        </Button>
 
 
                     </div>
