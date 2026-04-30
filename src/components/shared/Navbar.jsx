@@ -5,7 +5,7 @@ import Link from "next/link";
 const Navbar = () => {
     return (
         <div className="bg-[#0a0f0d]/70 backdrop-blur-md border-b border-[#1c2f26] rounded-full">
-            <nav className=" flex justify-between items-center  py-3 px-5">
+            <nav className=" flex flex-wrap justify-between items-center  py-3 px-5">
                 <div className="flex gap-2 items-center">
                     {/* <Image
             src={"/logo.svg"}
@@ -21,15 +21,16 @@ const Navbar = () => {
                 </div>
 
                 <ul className="flex items-center gap-5 text-sm">
-                    <li>
-                        <Link href={"/"}>Home</Link>
-                    </li>
-                    <li>
-                        <Link href={"/all-books"}>All Books</Link>
-                    </li>
-                    <li>
-                        <Link href={"/my-profile"}>My Profile</Link>
-                    </li>
+                    <Link href={'/'}>
+                        <li className="hover:text-[#10b981] cursor-pointer">Home</li>
+                    </Link>
+
+                    <Link href={'/all-books'}>
+                        <li className="hover:text-[#10b981] cursor-pointer">All Books</li></Link>
+                        
+                    <Link href={'/my-profile'}>
+                        <li className="hover:text-[#10b981] cursor-pointer">My Profile</li>
+                    </Link>
                 </ul>
 
                 <div className="flex gap-4">
