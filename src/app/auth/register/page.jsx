@@ -1,21 +1,41 @@
 "use client";
 
+import { authClient } from "@/lib/auth-client";
 import { Button, FieldError, Form, Input, Label, TextField } from "@heroui/react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
 import { FcGoogle } from "react-icons/fc";
+import { toast } from "react-toastify";
 
 export default function RegisterPage() {
-    const [show, setShow] = useState(false)
-    const handleRegister = (e) => {
+
+    const [show, setShow] = useState(false);
+    const router = useRouter();
+
+    const handleRegister = async (e) => {
         e.preventDefault();
         const name = e.target.name.value;
         const image = e.target.image.value;
         const email = e.target.email.value;
         const password = e.target.password.value;
-        console.log('email,pass', email, password, name, image)
 
+        const { data, error } = await authClient.signUp.email({
+            email,
+            password,
+            name,
+            image,
+        },{
+            onSuccess: ()=>{
+                router.push('/');
+                toast.success("Registration successful 🎉")
+            }
+        });
+        if(error){
+            toast.error(`${error.message}!`)
+        }
+        // console.log('data', data, error)
     };
 
     return (
@@ -114,7 +134,7 @@ export default function RegisterPage() {
 
                 </div>
                 <p className="text-sm text-[#9ca3af] text-center">
-                   Already have an account?{" "}
+                    Already have an account?{" "}
                     <Link href={'/auth/login'}>
                         <span className="text-[#34d399] hover:underline cursor-pointer">
                             Login
