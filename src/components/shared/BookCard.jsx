@@ -6,11 +6,10 @@ const BookCard = ({ book }) => {
     return (
         <div>
             <Card className="bg-[#15221c] p-6 ">
-                <div className="bg-[#111a16] rounded-2xl">
-                    <Image
-                        className="rounded-2xl mx-auto py-6"
+                <div className="bg-[#111a16] md:px-5  py-6 w-auto h-auto rounded-2xl ">
+                    <Image className="rounded-md w-auto   h-auto mx-auto"
                         src={book.image_url} alt={book.title}
-                        width={190} height={100} />
+                        width={180} height={100}/>
                 </div>
 
                 <div className="space-y-2 border-b border-[#34d399]/30 pb-4">
