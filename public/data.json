@@ -1,0 +1,110 @@
+[
+    {
+        "id": 1,
+        "title": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "description": "A timeless novel set in the Roaring Twenties that explores themes of wealth, love, and ambition. The story follows Jay Gatsby and his mysterious past as he pursues a lost love. Through lavish parties and hidden emotions, it reveals the illusion of the American Dream. The narrative highlights the contrast between reality and desire. It remains one of the most celebrated works in American literature.",
+        "category": "Story",
+        "available_quantity": 12,
+        "image_url": "https://i.ibb.co.com/khHN7Pk/9780143454212.jpg"
+    },
+    {
+        "id": 2,
+        "title": "Clean Code",
+        "author": "Robert C. Martin",
+        "description": "A must-read guide for software developers aiming to write better code. It explains principles of clean, readable, and maintainable programming. The book covers best practices, coding standards, and real-world examples. It emphasizes simplicity and clarity in software design. Widely considered essential for professional developers.",
+        "category": "Tech",
+        "available_quantity": 15,
+        "image_url": "https://i.ibb.co.com/9p9YF2K/clean-code.jpg"
+    },
+    {
+        "id": 3,
+        "title": "A Brief History of Time",
+        "author": "Stephen Hawking",
+        "description": "A fascinating exploration of the universe and its origins. Hawking explains complex scientific ideas in a simple and engaging way. The book discusses black holes, time, and the Big Bang theory. It bridges the gap between science and general readers. A landmark work in popular science.",
+        "category": "Science",
+        "available_quantity": 14,
+        "image_url": "https://i.ibb.co.com/4Zr5WmP/brief-history-time.jpg"
+    },
+    {
+        "id": 4,
+        "title": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "description": "A deeply moving story about racial injustice and moral growth in the American South. It follows young Scout Finch as she learns about empathy and human behavior. Her father, Atticus Finch, defends a wrongly accused man, standing for justice and integrity. The novel explores themes of prejudice, innocence, and compassion. It is widely regarded as a powerful and influential classic.",
+        "category": "Story",
+        "available_quantity": 11,
+        "image_url": "https://i.ibb.co.com/0cv102J/To-Kill-a-Mockingbird.webp"
+    },
+    {
+        "id": 5,
+        "title": "The Pragmatic Programmer",
+        "author": "Andrew Hunt",
+        "description": "A practical guide that helps developers improve their coding skills and mindset. It shares real-world advice on software craftsmanship and problem-solving. The book covers debugging, testing, and efficient workflows. It encourages continuous learning and adaptability. A classic resource for both beginners and experienced programmers.",
+        "category": "Tech",
+        "available_quantity": 13,
+        "image_url": "https://i.ibb.co.com/3zLkZpT/pragmatic-programmer.jpg"
+    },
+    {
+        "id": 6,
+        "title": "Cosmos",
+        "author": "Carl Sagan",
+        "description": "A journey through space and time that explores the wonders of the universe. Sagan combines science with storytelling to make complex ideas accessible. The book discusses astronomy, life, and human existence. It inspires curiosity and a sense of wonder. A classic in science communication.",
+        "category": "Science",
+        "available_quantity": 10,
+        "image_url": "https://i.ibb.co.com/7VxLk9N/cosmos.jpg"
+    },
+    {
+        "id": 7,
+        "title": "1984",
+        "author": "George Orwell",
+        "description": "A dystopian novel that presents a terrifying vision of a totalitarian future. It follows Winston Smith as he struggles under constant surveillance and oppressive control. The story explores themes of truth, freedom, and manipulation of information. Orwell highlights the dangers of absolute power and loss of individuality. The book remains highly relevant in modern discussions about privacy and authority.",
+        "category": "Story",
+        "available_quantity": 16,
+        "image_url": "https://i.ibb.co.com/MprDyVt/51-BIA4rrae-L-AC-UF1000-1000-QL80.jpg"
+    },
+    {
+        "id": 8,
+        "title": "Introduction to Algorithms",
+        "author": "Thomas H. Cormen",
+        "description": "A comprehensive textbook covering a wide range of algorithms and data structures. It explains concepts with clarity and mathematical depth. The book is widely used in universities and by professionals. It helps build strong problem-solving and analytical skills. Essential for anyone studying computer science.",
+        "category": "Tech",
+        "available_quantity": 9,
+        "image_url": "https://i.ibb.co.com/5F1X8xk/algorithms.jpg"
+    },
+    {
+        "id": 9,
+        "title": "The Selfish Gene",
+        "author": "Richard Dawkins",
+        "description": "A groundbreaking book that explains evolution from a gene-centered perspective. It introduces the idea that genes drive natural selection. Dawkins uses clear examples to explain complex biological concepts. The book reshaped how people understand evolution. It remains influential in modern biology.",
+        "category": "Science",
+        "available_quantity": 12,
+        "image_url": "https://i.ibb.co.com/zSxYk8T/selfish-gene.jpg"
+    },
+    {
+        "id": 10,
+        "title": "Pride and Prejudice",
+        "author": "Jane Austen",
+        "description": "A romantic novel that explores relationships, class, and societal expectations. It follows Elizabeth Bennet and her evolving relationship with Mr. Darcy. Through wit and dialogue, Austen critiques social norms of her time. The story highlights personal growth, misunderstandings, and love. It remains one of the most beloved classics in English literature.",
+        "category": "Story",
+        "available_quantity": 14,
+        "image_url": "https://i.ibb.co.com/YdQDMpn/81me-ud-V63-L-AC-UF1000-1000-QL80.jpg"
+    },
+    {
+        "id": 11,
+        "title": "The Hobbit",
+        "author": "J.R.R. Tolkien",
+        "description": "An epic fantasy adventure that follows Bilbo Baggins on an unexpected journey. Along the way, he encounters dwarves, dragons, and magical creatures. The story explores courage, friendship, and personal growth. Tolkien’s rich world-building creates a captivating experience. It serves as a prelude to the Lord of the Rings series.",
+        "category": "Story",
+        "available_quantity": 13,
+        "image_url": "https://i.ibb.co.com/xS8YvxL/81m-CE-uclx-L-UF1000-1000-QL80.jpg"
+    },
+    {
+        "id": 12,
+        "title": "The Catcher in the Rye",
+        "author": "J.D. Salinger",
+        "description": "A coming-of-age novel that captures teenage confusion and rebellion. It follows Holden Caulfield as he navigates loneliness and identity in New York City. The story reflects on the loss of innocence and the struggles of growing up. Holden’s voice is raw, honest, and relatable. The novel remains a significant work in modern literature.",
+        "category": "Story",
+        "available_quantity": 11,
+        "image_url": "https://i.ibb.co.com/tYSWRfG/catcherrye-edited-1-800x.png"
+    }
+]
