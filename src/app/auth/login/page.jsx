@@ -1,20 +1,23 @@
 "use client";
 
-import { Button, Description, FieldError, Form, Input, Label, Separator, TextField } from "@heroui/react";
+import { Button, FieldError, Form, Input, Label, TextField } from "@heroui/react";
 import Link from "next/link";
+import { useState } from "react";
+import { FaEye, FaEyeSlash } from "react-icons/fa6";
 import { FcGoogle } from "react-icons/fc";
 
 export default function LoginPage() {
+    const [show, setShow]= useState(false)
     const onSubmit = (e) => {
         e.preventDefault();
         const email = e.target.email.value;
         const password = e.target.password.value;
-        console.log('email,pass',email,password)
+        console.log('email,pass', email, password)
 
     };
 
     return (
-        <div className="min-h-[90vh] flex justify-center items-center px-5 py-10">
+        <div className="min-h-screen flex justify-center items-center px-5 py-10">
             <Form className="w-full flex max-w-sm flex-col mx-auto gap-4 bg-[#111a16]/80 backdrop-blur-md border border-[#1c2f26] rounded-2xl p-6 "
                 onSubmit={onSubmit}>
                 <h1 className="text-center text-2xl font-bold text-[#e7f5ee]">Login your account</h1>
@@ -37,10 +40,11 @@ export default function LoginPage() {
                 </TextField>
 
                 <TextField
+                className={'relative'}
                     isRequired
                     minLength={8}
                     name="password"
-                    type="password"
+                    type={show ? 'text':'password'}
                     validate={(value) => {
                         if (value.length < 8) {
                             return "Password must be at least 8 characters";
@@ -57,7 +61,11 @@ export default function LoginPage() {
                 >
                     <Label className="text-[#9ca3af]">Password</Label>
                     <Input className='bg-[#0f1512] border border-[#1c2f26] focus:border-[#10b981] outline-none text-[#e7f5ee]' placeholder="Enter your password" />
-                    
+
+                    <span onClick={() => { setShow(!show) }}
+                        className=" absolute top-8.5 right-3">
+                        {show ? <FaEye color="#9ca3af" /> : <FaEyeSlash color="#9ca3af" />}
+                    </span>
                     <FieldError />
                 </TextField>
 
