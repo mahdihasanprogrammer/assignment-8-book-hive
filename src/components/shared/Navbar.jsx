@@ -1,9 +1,19 @@
 "use client";
+import { authClient } from "@/lib/auth-client";
+import SkeletonFile from "@/ui/SkeletonFile";
 import { Button } from "@heroui/react";
 import Image from "next/image";
 import Link from "next/link";
 
 const Navbar = () => {
+
+    const { data, isPending } = authClient.useSession();
+    const user = data?.user;
+
+    const handleLogout = async () => {
+        await authClient.signOut();
+    }
+
     return (
         <div className="container mx-auto  border-b border-[#1c2f26]">
             <nav className="bg-[#0a0f0d]/70 backdrop-blur-md flex flex-wrap justify-between items-center px-5 md:px-8 lg:px-12  py-3">
@@ -34,21 +44,27 @@ const Navbar = () => {
                     </Link>
                 </ul>
 
-                <div className="flex gap-4">
-                    <div className="flex items-center gap-4 text-sm">
-
-                        <Button  className="bg-[#10b981] hover:bg-[#059669] 
-                     transition duration-300">
-                            <Link href={'/auth/login'}>Login</Link>
-                        </Button >
-
-                        <Button className="bg-[#ef4444] hover:bg-[#dc2626]   transition duration-300">
-                            <Link href={"/"}>Logout</Link>
-                        </Button>
-
-
+                {isPending ?
+                   <SkeletonFile/> :
+                    
+                    user ? 
+                    <div className="flex items-center gap-4">
+                        <div className="text-xs">
+                            <span>hello !</span>
+                            <p>{user?.name || 'user'}</p>
+                        </div>
+                        <Link href={"/"}>
+                            <Button onClick={handleLogout}
+                                className="bg-[#ef4444] hover:bg-[#dc2626]   transition duration-300"> Logout
+                            </Button>
+                        </Link>
                     </div>
-                </div>
+                :
+                <Button className="bg-[#10b981] hover:bg-[#059669] 
+                     transition duration-300">
+                    <Link href={'/auth/login'}>Login</Link>
+                </Button >}
+
             </nav>
         </div>
     );
