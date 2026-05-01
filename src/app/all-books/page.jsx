@@ -9,7 +9,7 @@ const AllBooksPage = async () => {
     return (
         <div>
             <SearchBAr/>
-            <div className="grid grid-cols-1  lg:grid-cols-4 gap-5 justify-between  my-15 rounded-2xl">
+            <div className="grid grid-cols-1  lg:grid-cols-4 gap-5 justify-between p-4 my-15 rounded-2xl">
                 <SideBar />
 
                 <div className="bg-[#0f1512] lg:col-span-3 lg:p-8 rounded-2xl">
