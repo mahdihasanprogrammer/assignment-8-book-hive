@@ -31,7 +31,9 @@ export default function RootLayout({ children }) {
           {children}
         </main>
         <Footer/>
-        <ToastContainer />
+        <ToastContainer 
+        autoClose={3000}
+        theme="colored" />
       </body>
     </html>
   );

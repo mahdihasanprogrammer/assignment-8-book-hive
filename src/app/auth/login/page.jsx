@@ -1,23 +1,38 @@
 "use client";
 
-import { Button, FieldError, Form, Input, Label, TextField } from "@heroui/react";
+import { authClient } from "@/lib/auth-client";
+import { Button, FieldError, Form, Input, Label, TextField, } from "@heroui/react";
 import Link from "next/link";
 import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
 import { FcGoogle } from "react-icons/fc";
+import { toast } from "react-toastify";
 
 export default function LoginPage() {
+
     const [show, setShow]= useState(false)
-    const onSubmit = (e) => {
+
+    const onSubmit =async (e) => {
         e.preventDefault();
         const email = e.target.email.value;
         const password = e.target.password.value;
-        console.log('email,pass', email, password)
+        // console.log('email,pass', email, password);
+
+        const {data, error} =await authClient.signIn.email({
+            email,
+            password,
+            callbackURL:'/'
+        })
+        
+        if(error){
+            toast.error(error.message)
+        }
+        console.log('login',data,error)
 
     };
 
     return (
-        <div className="min-h-screen flex justify-center items-center px-5 py-10">
+        <div className="min-h-screen flex justify-center items-center  py-10">
             <Form className="w-full flex max-w-sm flex-col mx-auto gap-4 bg-[#111a16]/80 backdrop-blur-md border border-[#1c2f26] rounded-2xl p-6 "
                 onSubmit={onSubmit}>
                 <h1 className="text-center text-2xl font-bold text-[#e7f5ee]">Login your account</h1>
