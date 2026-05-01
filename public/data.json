@@ -15,7 +15,7 @@
         "description": "A must-read guide for software developers aiming to write better code. It explains principles of clean, readable, and maintainable programming. The book covers best practices, coding standards, and real-world examples. It emphasizes simplicity and clarity in software design. Widely considered essential for professional developers.",
         "category": "Tech",
         "available_quantity": 15,
-        "image_url": "https://i.ibb.co.com/9p9YF2K/clean-code.jpg"
+        "image_url": "https://i.ibb.co.com/NdR2t8PS/clean-Code.webp"
     },
     {
         "id": 3,
@@ -24,7 +24,7 @@
         "description": "A fascinating exploration of the universe and its origins. Hawking explains complex scientific ideas in a simple and engaging way. The book discusses black holes, time, and the Big Bang theory. It bridges the gap between science and general readers. A landmark work in popular science.",
         "category": "Science",
         "available_quantity": 14,
-        "image_url": "https://i.ibb.co.com/4Zr5WmP/brief-history-time.jpg"
+        "image_url": ""
     },
     {
         "id": 4,
@@ -42,7 +42,7 @@
         "description": "A practical guide that helps developers improve their coding skills and mindset. It shares real-world advice on software craftsmanship and problem-solving. The book covers debugging, testing, and efficient workflows. It encourages continuous learning and adaptability. A classic resource for both beginners and experienced programmers.",
         "category": "Tech",
         "available_quantity": 13,
-        "image_url": "https://i.ibb.co.com/3zLkZpT/pragmatic-programmer.jpg"
+        "image_url": "https://i.ibb.co.com/9JgYCF8/BC-020161622-X.avif"
     },
     {
         "id": 6,
