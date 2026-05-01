@@ -15,7 +15,7 @@
         "description": "A must-read guide for software developers aiming to write better code. It explains principles of clean, readable, and maintainable programming. The book covers best practices, coding standards, and real-world examples. It emphasizes simplicity and clarity in software design. Widely considered essential for professional developers.",
         "category": "Tech",
         "available_quantity": 15,
-        "image_url": ""
+        "image_url": "https://i.ibb.co/NdR2t8PS/clean-Code.webp"
     },
     {
         "id": 3,
@@ -33,7 +33,7 @@
         "description": "A deeply moving story about racial injustice and moral growth in the American South. It follows young Scout Finch as she learns about empathy and human behavior. Her father, Atticus Finch, defends a wrongly accused man, standing for justice and integrity. The novel explores themes of prejudice, innocence, and compassion. It is widely regarded as a powerful and influential classic.",
         "category": "Story",
         "available_quantity": 11,
-        "image_url": ""
+        "image_url": "https://i.ibb.co.com/0cv102J/To-Kill-a-Mockingbird.webp"
     },
     {
         "id": 5,
@@ -42,7 +42,7 @@
         "description": "A practical guide that helps developers improve their coding skills and mindset. It shares real-world advice on software craftsmanship and problem-solving. The book covers debugging, testing, and efficient workflows. It encourages continuous learning and adaptability. A classic resource for both beginners and experienced programmers.",
         "category": "Tech",
         "available_quantity": 13,
-        "image_url": ""
+        "image_url": "https://i.ibb.co/spJ66XMW/thr-programmer.jpg"
     },
     {
         "id": 6,
@@ -51,7 +51,7 @@
         "description": "A journey through space and time that explores the wonders of the universe. Sagan combines science with storytelling to make complex ideas accessible. The book discusses astronomy, life, and human existence. It inspires curiosity and a sense of wonder. A classic in science communication.",
         "category": "Science",
         "available_quantity": 10,
-        "image_url": "https://i.ibb.co/7VxLk9N/cosmos.jpg"
+        "image_url": "https://i.ibb.co/LdPwyRgv/55030.jpg"
     },
     {
         "id": 7,
@@ -69,7 +69,7 @@
         "description": "A comprehensive textbook covering a wide range of algorithms and data structures. It explains concepts with clarity and mathematical depth. The book is widely used in universities and by professionals. It helps build strong problem-solving and analytical skills. Essential for anyone studying computer science.",
         "category": "Tech",
         "available_quantity": 9,
-        "image_url": "https://i.ibb.co/5F1X8xk/algorithms.jpg"
+        "image_url": "https://i.ibb.co/k68465H2/u-files-store-5-8.jpg"
     },
     {
         "id": 9,
@@ -78,7 +78,7 @@
         "description": "A groundbreaking book that explains evolution from a gene-centered perspective. It introduces the idea that genes drive natural selection. Dawkins uses clear examples to explain complex biological concepts. The book reshaped how people understand evolution. It remains influential in modern biology.",
         "category": "Science",
         "available_quantity": 12,
-        "image_url": "https://i.ibb.co/zSxYk8T/selfish-gene.jpg"
+        "image_url": "https://i.ibb.co/Mwd2wtm/frame-6-1.png"
     },
     {
         "id": 10,

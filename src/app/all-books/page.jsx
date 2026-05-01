@@ -13,8 +13,8 @@ const AllBooksPage = async () => {
                 <SideBar />
 
                 <div className="bg-[#0f1512] lg:col-span-3 lg:p-8 rounded-2xl">
-                    <h1 className="text-2xl lg:text-3xl font-bold mb-5">All books</h1>
-                    <div className="grid grid-cols-1 md:grid-cols-2  gap-5 ">
+                    <h1 className="text-2xl  font-bold mb-5">All books</h1>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-5 ">
                         {
                             books.map(book =>
                                 <BookCard key={book.id}
