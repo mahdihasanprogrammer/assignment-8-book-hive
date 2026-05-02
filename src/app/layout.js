@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
     >
       <body 
       className="min-h-full flex flex-col text-[#e7f5ee]
-       bg-linear-to-br from-[#0a0f0d] via-[#0f1f18] to-[#111a16]
+       bg-linear-to-br from-[#0a0f0d] via-[#0f1f18] to-[#111a16] 
        ">
 
         <Navbar/>

@@ -18,7 +18,7 @@ const Hero = () => {
                     alt='banner image'
                     width={500}
                     height={500}
-                    className='rounded-xl shadow-2xl'
+                    className='rounded-xl mx-auto shadow-2xl'
                 />
 
             </div>

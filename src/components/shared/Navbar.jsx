@@ -4,14 +4,21 @@ import SkeletonFile from "@/ui/SkeletonFile";
 import { Button } from "@heroui/react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const Navbar = () => {
-
+    const router =useRouter();
     const { data, isPending } = authClient.useSession();
     const user = data?.user;
 
     const handleLogout = async () => {
-        await authClient.signOut();
+        await authClient.signOut({
+            fetchOptions: {
+                onSuccess: () => {
+                    router.push("/auth/login"); // redirect to login page
+                },
+            },
+        });
     }
 
     return (
@@ -53,12 +60,11 @@ const Navbar = () => {
                                 <span>hello !</span>
                                 <p>{user?.name || 'user'}</p>
                             </div>
-                            <Link href={"/"}>
+                           
                                 <Button onClick={handleLogout}
                                     className="hover:bg-[#ef4444] bg-[#dc2626]   transition duration-300 rounded-md"
                                     size="sm"> Logout
                                 </Button>
-                            </Link>
                         </div>
                         :
                         <Button className="hover:bg-[#10b981] bg-[#059669] 

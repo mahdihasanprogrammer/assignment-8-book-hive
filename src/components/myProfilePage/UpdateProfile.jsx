@@ -39,7 +39,8 @@ export function UpdateProfile() {
                                 <form onSubmit={handleUpdateUser}
                                     className="flex flex-col gap-4 ">
 
-                                    <TextField className="w-full" name="name" type="text">
+                                    <TextField
+                                    className="w-full" name="name" type="text">
                                         <Label className="text-[#9ca3af]">Name</Label>
                                         <Input className='bg-[#0f1512] border border-[#1c2f26] focus:border-[#10b981] outline-none text-[#e7f5ee]'
                                             placeholder="Enter your Name" />
