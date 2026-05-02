@@ -31,7 +31,7 @@ const Navbar = () => {
                     </Link>
                 </div>
 
-                <ul className="flex items-center gap-5 text-sm">
+                <ul className="flex items-center gap-8 text-sm">
                     <Link href={'/'}>
                         <li className="hover:text-[#10b981] cursor-pointer">Home</li>
                     </Link>
@@ -45,25 +45,27 @@ const Navbar = () => {
                 </ul>
 
                 {isPending ?
-                   <SkeletonFile/> :
-                    
-                    user ? 
-                    <div className="flex items-center gap-4">
-                        <div className="text-xs">
-                            <span>hello !</span>
-                            <p>{user?.name || 'user'}</p>
+                    <SkeletonFile /> :
+
+                    user ?
+                        <div className="flex items-center gap-4">
+                            <div className="text-xs">
+                                <span>hello !</span>
+                                <p>{user?.name || 'user'}</p>
+                            </div>
+                            <Link href={"/"}>
+                                <Button onClick={handleLogout}
+                                    className="hover:bg-[#ef4444] bg-[#dc2626]   transition duration-300 rounded-md"
+                                    size="sm"> Logout
+                                </Button>
+                            </Link>
                         </div>
-                        <Link href={"/"}>
-                            <Button onClick={handleLogout}
-                                className="bg-[#ef4444] hover:bg-[#dc2626]   transition duration-300"> Logout
-                            </Button>
-                        </Link>
-                    </div>
-                :
-                <Button className="bg-[#10b981] hover:bg-[#059669] 
-                     transition duration-300">
-                    <Link href={'/auth/login'}>Login</Link>
-                </Button >}
+                        :
+                        <Button className="hover:bg-[#10b981] bg-[#059669] 
+                     transition duration-300 rounded-md"
+                            size="sm">
+                            <Link href={'/auth/login'}>Login</Link>
+                        </Button >}
 
             </nav>
         </div>

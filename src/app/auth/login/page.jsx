@@ -85,7 +85,7 @@ export default function LoginPage() {
                 </TextField>
 
                 <div className="flex gap-2">
-                    <Button className={'bg-[#10b981] hover:bg-[#059669] text-white w-full'} type="submit">
+                    <Button className={'hover:bg-[#10b981] bg-[#059669] text-white w-full'} type="submit">
                         Login
                     </Button>
                 </div>

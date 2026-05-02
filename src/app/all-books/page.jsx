@@ -12,7 +12,7 @@ const AllBooksPage = async () => {
             <div className="grid grid-cols-1  lg:grid-cols-4 gap-5 justify-between p-4 my-15 rounded-2xl">
                 <SideBar />
 
-                <div className="bg-[#0f1512] lg:col-span-3 lg:p-8 rounded-2xl">
+                <div className="bg-[#0f1512] lg:col-span-3 p-4 lg:p-8 rounded-2xl">
                     <h1 className="text-2xl  font-bold mb-5">All books</h1>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-5 ">
                         {
