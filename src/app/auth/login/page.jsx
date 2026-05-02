@@ -10,31 +10,40 @@ import { toast } from "react-toastify";
 
 export default function LoginPage() {
 
-    const [show, setShow]= useState(false)
+    const [show, setShow] = useState(false)
 
-    const onSubmit =async (e) => {
+    const handleLogin = async (e) => {
         e.preventDefault();
         const email = e.target.email.value;
         const password = e.target.password.value;
         // console.log('email,pass', email, password);
 
-        const {data, error} =await authClient.signIn.email({
+        const { data, error } = await authClient.signIn.email({
             email,
             password,
-            callbackURL:'/'
+            callbackURL: '/'
         })
-        
-        if(error){
+
+        if (error) {
             toast.error(error.message)
         }
-        console.log('login',data,error)
-
+        console.log('login', data, error);
     };
+
+     const handleLoginWithGoogle = async () => {
+            const userData = await authClient.signIn.social({
+                provider: "google",
+            });
+
+            console.log('userDAta',userData)
+        };
+
+        
 
     return (
         <div className="min-h-screen flex justify-center items-center  py-10">
             <Form className="w-full flex max-w-sm flex-col mx-auto gap-4 bg-[#111a16]/80 backdrop-blur-md border border-[#1c2f26] rounded-2xl p-6 "
-                onSubmit={onSubmit}>
+                onSubmit={handleLogin}>
                 <h1 className="text-center text-2xl font-bold text-[#e7f5ee]">Login your account</h1>
                 <TextField
                     isRequired
@@ -55,11 +64,11 @@ export default function LoginPage() {
                 </TextField>
 
                 <TextField
-                className={'relative'}
+                    className={'relative'}
                     isRequired
                     minLength={8}
                     name="password"
-                    type={show ? 'text':'password'}
+                    type={show ? 'text' : 'password'}
                     validate={(value) => {
                         if (value.length < 8) {
                             return "Password must be at least 8 characters";
@@ -97,7 +106,8 @@ export default function LoginPage() {
                         <div className="border w-full border-[#1c2f26]"></div>
                     </div>
 
-                    <Button className="bg-[#15221c] border border-[#1c2f26] text-[#e7f5ee] w-full py-5">
+                    <Button onClick={handleLoginWithGoogle}
+                     className="bg-[#15221c] border border-[#1c2f26] text-[#e7f5ee] w-full py-5">
                         <FcGoogle />
                         Login with Google
                     </Button>

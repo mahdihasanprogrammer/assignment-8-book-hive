@@ -18,10 +18,13 @@ const MyProfilePage = () => {
                     <Card
                         className="space-y-2 mx-auto max-w-96 p-10 bg-[#111a16]/80 backdrop-blur-md border border-[#1c2f26] ">
 
-                        <Avatar className="size-30 mx-auto object-center object-cover">
-                            <Avatar.Image alt={user?.name} src={user?.image} />
+                        <Avatar className="size-25 mx-auto object-center object-cover">
+
+                            <Avatar.Image referrerPolicy="no-referrer"
+                             alt={user?.name} src={user?.image} />
                             <Avatar.Fallback className="bg-[#1c2f26] text-2xl text-white">{user?.name.charAt(0)}</Avatar.Fallback>
                         </Avatar>
+
                         <div className="text-center space-y-1">
                             <p className="text-xl font-bold">{user?.name}</p>
                             <h1 className="text-muted">{user?.email}</h1>
