@@ -7,12 +7,14 @@ const AllBooksPage = async () => {
     const books = await getAllBooks();
 
     return (
-        <div>
+        <div className="">
             <SearchBAr/>
             <div className="grid grid-cols-1  lg:grid-cols-4 gap-4 justify-between p-4 my-15 rounded-2xl">
                 <SideBar />
 
-                <div className="bg-[#0f1512] lg:col-span-3 p-4 lg:p-8 rounded-2xl">
+                <div className="bg-[#0f1512]  
+                animate__animated animate__slideInUp 
+                 lg:col-span-3 p-4 lg:p-8 rounded-2xl">
                     <h1 className="text-2xl  font-bold mb-5">All books</h1>
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  gap-4 ">
                         {

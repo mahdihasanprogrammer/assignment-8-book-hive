@@ -22,7 +22,7 @@ const Navbar = () => {
     }
 
     return (
-        <div className="container mx-auto  border-b border-[#1c2f26]">
+        <div className="container mx-auto  border-b border-[#1c2f26] animate__animated animate__slideInDown">
             <nav className="bg-[#0a0f0d]/70 backdrop-blur-md flex flex-wrap justify-between items-center px-5 md:px-8 lg:px-12  py-3">
                 <div className="flex gap-2 items-center">
                     {/* <Image
