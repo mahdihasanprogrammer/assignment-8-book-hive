@@ -1,4 +1,5 @@
 import { getCategories } from "@/lib/data";
+import Link from "next/link";
 
 const SideBar = async () => {
     const categories = await getCategories();
@@ -8,7 +9,9 @@ const SideBar = async () => {
             <h1 className="text-2xl mb-5 font-bold">Categories</h1>
             <ul className="space-y-4">
                 {
-                    categories.map(category => <li className="hover:text-[#10b981] cursor-pointer">{category.name}</li>)
+                    categories.map(category => <Link href={`?category=${category.name.toLowerCase()}`}>
+                        <li className="hover:text-[#10b981] cursor-pointer">{category.name}</li>
+                    </Link>)
                 }
             </ul>
         </div>

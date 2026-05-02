@@ -4,16 +4,16 @@ import Image from 'next/image';
 
 const Hero = () => {
     return (
-        <div className="bg-[#0f1f18] px-5 rounded-2xl justify-center items-center
-         my-10 md:my-15 py-10 md:py-15 md:px-15 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-15  animate__animated animate__fadeInUp">
+        <div className="bg-[#0f1f18] px-5 rounded-2xl justify-center items-center relative z-0
+         my-10 md:my-15 py-10 md:py-15 md:px-15 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-15  ">
 
-            <div className='space-y-3'>
+            <div className='space-y-3 animate__animated  animate__fadeInLeft'>
                 <h1 className='text-3xl md:text-5xl font-bold'>Find Your Next Great Read</h1>
                 <p className='text-[#d1d5db]'>Discover thousands of books across stories, tech, and science  borrow anytime,</p>
                 <Button className='mt-4 bg-[#10b981] hover:bg-[#059669] transition duration-300'>Browse Now</Button>
             </div>
 
-            <div className=''>
+            <div className='animate__animated  animate__fadeInRight'>
                 <Image
                     src='/hero_img.jpg'
                     alt='banner image'

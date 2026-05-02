@@ -26,16 +26,24 @@ export default function RegisterPage() {
             password,
             name,
             image,
-        },{
-            onSuccess: ()=>{
+        }, {
+            onSuccess: () => {
                 router.push('/');
                 toast.success("Registration successful 🎉")
             }
         });
-        if(error){
+        if (error) {
             toast.error(`${error.message}!`)
         }
         // console.log('data', data, error)
+    };
+
+    const handleLoginWithGoogle = async () => {
+        const userData = await authClient.signIn.social({
+            provider: "google",
+        });
+
+        console.log('userDAta', userData)
     };
 
     return (
@@ -127,7 +135,8 @@ export default function RegisterPage() {
                         <div className="border w-full border-[#1c2f26]"></div>
                     </div>
 
-                    <Button className="bg-[#15221c] border border-[#1c2f26] text-[#e7f5ee] w-full py-5">
+                    <Button onClick={handleLoginWithGoogle}
+                        className="bg-[#15221c] border border-[#1c2f26] text-[#e7f5ee] w-full py-5">
                         <FcGoogle />
                         Login with Google
                     </Button>
