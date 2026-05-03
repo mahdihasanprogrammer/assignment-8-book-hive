@@ -61,16 +61,15 @@ const Navbar = () => {
                             </ul>
                         }
                     </div>
-                    {/* <Image
-            src={"/logo.svg"}
-            alt="logo"
-            loading="eager"
-            width={20}
-            height={20}
-            className="object-cover h-auto w-auto"
-          /> */}
                     <Link href={'/'}>
-                        <h3 className="font-black text-lg text-[#10b981]">BookHive</h3>
+                        <Image
+                            src={"/logo-resize.png"}
+                            alt="logo"
+                            loading="eager"
+                            width={100}
+                            height={50}
+
+                        />
                     </Link>
                 </div>
 
