@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 
@@ -10,28 +11,27 @@ export default function Footer() {
 
                     {/* Brand */}
                     <div>
-                        <h2 className="text-xl font-bold text-[#10b981]">
-                            Book Hive
-                        </h2>
+                        <Link href={'/'}>
+                            <Image
+                                src={"/logo-resize.png"}
+                                alt="logo"
+                                loading="eager"
+                                width={120}
+                                height={50}
+
+                            />
+                        </Link>
                         <p className="mt-3 text-sm">
                             A modern digital library platform where you can explore, borrow,
                             and manage your favorite books seamlessly.
                         </p>
                     </div>
 
-                    {/* Links */}
+                    {/* contact us*/}
                     <div>
-                        <h3 className="text-white font-semibold mb-4">Quick Links</h3>
-                        <ul className="space-y-2 text-sm">
-                            <Link href={'/'}>
-                                <li className="hover:text-[#10b981] cursor-pointer">Home</li>
-                            </Link>
-                            <Link href={'/all-books'}>
-                                <li className="hover:text-[#10b981] cursor-pointer">All Books</li></Link>
-                            <Link href={'/my-profile'}>
-                                <li className="hover:text-[#10b981] cursor-pointer">My Profile</li>
-                            </Link>
-                        </ul>
+                        <h3 className="text-white font-semibold mb-4">Contact Us</h3>
+                        <p className="text-sm">Email: mahdihasan.code@gmail.com</p>
+                        <p className="text-sm">WhatsApp: 01400596304</p>
                     </div>
 
                     {/* Social */}

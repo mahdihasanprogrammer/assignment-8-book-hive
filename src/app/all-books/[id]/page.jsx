@@ -10,7 +10,7 @@ const BookDetailsPage = async ({ params }) => {
 
     const books = await getAllBooks();
     const book = books.find(b => b.id == id);
-    console.log(book);
+ 
 
 
   
