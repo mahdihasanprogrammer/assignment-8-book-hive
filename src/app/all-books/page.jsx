@@ -8,9 +8,10 @@ import { SearchBAr } from "@/ui/SearchBar";
 const AllBooksPage = async ({ searchParams }) => {
 
     const { category, search } = await searchParams;
-    console.log(category, 'this is category')
+    // console.log(category, 'this is category')
 
     const books = await getAllBooks();
+    console.log(books, 'book from all books')
     const filteredBooks = books.filter(book => {
 
         if (search) {

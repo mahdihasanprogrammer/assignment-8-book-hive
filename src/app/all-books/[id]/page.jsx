@@ -1,14 +1,32 @@
+
+import { auth } from "@/lib/auth";
 import { getAllBooks } from "@/lib/data";
 import { Button, Chip } from "@heroui/react";
 import Image from "next/image";
-import Link from "next/link";
+import { headers } from "next/headers";
+import BorrowBook from "@/ui/BorrowBook";
+
 
 const BookDetailsPage = async ({ params }) => {
     const { id } = await params;
 
     const books = await getAllBooks();
     const book = books.find(b => b.id == id);
-    console.log(book)
+    console.log(book);
+
+    const session = await auth.api.getSession({
+         headers: await headers() 
+    })
+    // console.log(session)
+
+    const handleBorrow=()=>{
+        if(session){
+            toast.warning('you are already logged in');
+        }
+        else{
+            redirect('/auth/login')
+        }
+    }
 
     return (
         <section className=" bg-[#15221c] hover:bg-[#1c2f26]
@@ -39,13 +57,9 @@ const BookDetailsPage = async ({ params }) => {
                     >{book.category}</Chip>
                 </div>
 
-                <Link href={`/all-books/${book.id}`}>
-                    <Button
-                        className=' bg-[#16ad7b] hover:bg-[#05835b] 
-                     transition duration-300'>
-                        Borrow This Book
-                    </Button>
-                </Link>
+              
+                  <BorrowBook handleBorrow={handleBorrow}/>
+              
             </div>
         </section>
     );

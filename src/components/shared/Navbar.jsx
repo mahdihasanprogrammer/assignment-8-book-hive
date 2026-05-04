@@ -4,25 +4,17 @@ import SkeletonFile from "@/ui/SkeletonFile";
 import { Button } from "@heroui/react";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { GrClose } from "react-icons/gr";
 import { RiMenu2Line } from "react-icons/ri";
 
 const Navbar = () => {
     const [menu, setMenu] = useState(false);
-    const router = useRouter();
     const { data, isPending } = authClient.useSession();
     const user = data?.user;
 
     const handleLogout = async () => {
-        await authClient.signOut({
-            fetchOptions: {
-                onSuccess: () => {
-                    router.push("/auth/login"); // redirect to login page
-                },
-            },
-        });
+        await authClient.signOut();
     }
 
     const links = <>
