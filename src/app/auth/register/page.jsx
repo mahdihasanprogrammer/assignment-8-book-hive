@@ -21,7 +21,7 @@ export default function RegisterPage() {
         const email = e.target.email.value;
         const password = e.target.password.value;
 
-        const { data, error } = await authClient.signUp.email({
+        const { error } = await authClient.signUp.email({
             email,
             password,
             name,

@@ -1,9 +1,7 @@
 
-import { auth } from "@/lib/auth";
 import { getAllBooks } from "@/lib/data";
-import { Button, Chip } from "@heroui/react";
+import { Chip } from "@heroui/react";
 import Image from "next/image";
-import { headers } from "next/headers";
 import BorrowBook from "@/ui/BorrowBook";
 
 
@@ -14,19 +12,8 @@ const BookDetailsPage = async ({ params }) => {
     const book = books.find(b => b.id == id);
     console.log(book);
 
-    const session = await auth.api.getSession({
-         headers: await headers() 
-    })
-    // console.log(session)
 
-    const handleBorrow=()=>{
-        if(session){
-            toast.warning('you are already logged in');
-        }
-        else{
-            redirect('/auth/login')
-        }
-    }
+  
 
     return (
         <section className=" bg-[#15221c] hover:bg-[#1c2f26]
@@ -34,8 +21,8 @@ const BookDetailsPage = async ({ params }) => {
 
             <div className=" md:w-66">
                 <Image src={book.image_url}
-                   width={320}
-                   height={200}
+                    width={320}
+                    height={200}
                     alt={book.title}
                     sizes="(max-width: 768px) 100vw, 33vw" />
             </div>
@@ -49,7 +36,7 @@ const BookDetailsPage = async ({ params }) => {
 
                 <div className="flex  gap-10 items-center">
                     <p className="text-base text-[#d1d5db]">
-                       Available Quantity: <span className="font-bold">{book.available_quantity}</span>
+                        Available Quantity: <span className="font-bold">{book.available_quantity}</span>
                     </p>
                     <Chip className={`${book.category === 'Tech' ? 'bg-[#38bdf8]/15 text-[#38bdf8] border border-[#38bdf8]/30'
                         : book.category === 'Story' ? "bg-[#fbbf24]/15 text-[#fbbf24] border border-[#fbbf24]/30" : "bg-[#34d399]/15 text-[#34d399] border border-[#34d399]/30"
@@ -57,9 +44,9 @@ const BookDetailsPage = async ({ params }) => {
                     >{book.category}</Chip>
                 </div>
 
-              
-                  <BorrowBook handleBorrow={handleBorrow}/>
-              
+
+                <BorrowBook />
+
             </div>
         </section>
     );
