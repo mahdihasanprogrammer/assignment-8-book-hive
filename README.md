@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 📚 Book Hive
 
-## Getting Started
+Book Hive is a modern, full-stack online book borrowing platform built with **Next.js**. It provides users with a smooth and simple experience to explore, search, and borrow their favorite books digitally.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🔗 Live Link 
+🌐 https://assignment-8-book-hive.vercel.app
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 💻 GitHub Repository
+ https://github.com/mahdihasanprogrammer/assignment-8-book-hive.git
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📖 Project Overview
 
-## Learn More
+Book Hive works like a digital library where users can browse a vast collection of books. The application features a clean and fast interface, allowing users to search by title, filter by categories, and manage their borrowings securely.
 
-To learn more about Next.js, take a look at the following resources:
+**Goal:** To build a user-friendly, high-performance library management system with real-world functionality.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ✨ Key Features
 
-## Deploy on Vercel
+*   🔐 **Secure Authentication:** Email & Google login via BetterAuth.
+*   🔍 **Advanced Search:** Find books instantly by their titles.
+*   🧩 **Category Filtering:** Filter books by genres like Story, Tech, and Science.
+*   📖 **Detailed View:** Dedicated book pages showing availability status.
+*   📥 **Borrowing System:** Integrated borrow functionality (protected routes).
+*   👤 **User Profile:** Personalized dashboard with profile update features.
+*   🎯 **Featured Books:** Highlighted section for trending or top-rated books.
+*   🎟️ **Membership:** Exclusive section for library members.
+*   ⭐ **Review System:** Users can leave feedback on books.
+*   📱 **Responsive Design:** Optimized for all devices (Mobile, Tablet, Desktop).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🧱 Tech Stack
+
+*   **Framework:** [Next.js](https://nextjs.org)
+*   **Library:** [React](https://reactjs.org)
+*   **Styling:** [Tailwind CSS](https://tailwindcss.com)
+*   **UI Components:** [HeroUI](https://heroui.com)
+*   **Database:** [MongoDB](https://mongodb.com)
+*   **Auth:** [BetterAuth](https://better-auth.com)
+
+---
+
+## 🔧 Dependencies & Packages
+
+*   🎭 `animate.css` - Smooth animations.
+*   🖼️ `react-fast-marquee` - Dynamic scrolling text/banners.
+*   🔔 `react-toastify` - Interactive notifications.
+*   🎯 `react-icons` - Modern iconography.
+*   ⏳ `react-spinners` - Loading state indicators.
+
+---
+
+## ⚙️ Run Project Locally
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com.git
+   cd book-hive
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Set up Environment Variables:**
+   Create a `.env.local` file in the root directory and add your credentials:
+   ```env
+   MONGODB_URI=your_mongodb_uri  
+   BETTER_AUTH_SECRET=your_secret  
+   BETTER_AUTH_URL=http://localhost:3000
+   ```
+
+4. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
+   Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+---
+
+## 💡 Note
+
+This project focuses on a clean UI/UX, robust authentication flow, and real-world usability using the latest web technologies.
+
+Developed with ❤️ by Mahdi Hasan
